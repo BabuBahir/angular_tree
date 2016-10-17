@@ -10,16 +10,14 @@
 	 
 	<p ng-model= "male" ng-show="varFemaleSinger">	 
 		<br/>	
-		<a ng-click="female_toggle($event)" href="#/Lata">Lata and {{male}}</a> 
-		<a ng-click="female_toggle($event)" href="#/Asha">Asha and {{male}}</a> 
+		<a id="Lata" ng-click="female_toggle($event)" href="">Lata and {{male}}</a> 
+		<a id="Asha" ng-click="female_toggle($event)" href="">Asha and {{male}}</a> 
 	</p>
-	
-    <li ng-show="mySongs" class="artist cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
-      <a href="#/details/{{artists.indexOf(item)}}">        
+	 
+    <li ng-show="mySongs" class="artist cf" ng-repeat="item in artists | filter: {nickName:query}"> 
+        
         <div class="info">
-          <h2>{{item.song}}</h2>
-		  <h3>{{item.male}}</h3>
-          <h3>{{item.female}}</h3>
+          <h4>{{item.song}}</h4>		   
         </div>
       </a>
     </li>

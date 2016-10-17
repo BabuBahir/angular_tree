@@ -2,31 +2,37 @@
   {
     "song": "Song 1",
     "male": "Kishore",
-    "female": "Lata"
+    "female": "Lata",
+	"nickName":"KishoreLata"
   },
   {
     "song": "Song 2",
     "male": "Kishore",
-    "female": "Lata"
+    "female": "Lata",
+	"nickName":"KishoreLata"
   },
   {
     "song": "Song 3",
     "male": "Kishore",
-    "female": "Asha"
+    "female": "Asha",
+	"nickName":"KishoreAsha"
   },
   {
     "song": "Song 4",
     "male": "Manna",
-    "female": "Lata"
+    "female": "Lata",
+	"nickName":"MannaLata"
   },
   {
     "song": "Song 5",
     "male": "Manna",
-    "female": "Asha"
+    "female": "Asha",
+	"nickName":"MannaAsha"
   },
   {
      "song": "Song 6",
     "male": "Manna",
-    "female": "Asha"
+    "female": "Asha",
+	"nickName":"MannaAsha"
   } 
 ]

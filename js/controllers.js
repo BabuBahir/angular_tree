@@ -7,13 +7,26 @@ artistControllers.controller('ListController', ['$scope', '$http', function($sco
 	
     $scope.toggle = function() {		  
 		  $scope.myMale = !$scope.myMale;	 
-		  $scope.varFemaleSinger= false;		  
+		  $scope.varFemaleSinger= false;		 
+		  $scope.mySongs = false;		  
 	};
 	
 	$scope.first_toggle = function($event) {
 		  var str = $event.currentTarget.id;				   		  		   
+		  $scope.mySongs = false;
 		  $scope.varFemaleSinger = !$scope.varFemaleSinger;
 		  $scope.male=str;			  
+	};
+	
+	$scope.female_toggle = function($event){
+		$scope.mySongs = true;
+		$scope.varFemaleSinger = true;
+		$scope.myMale = true;
+		var girl = $event.currentTarget.id;
+		var boy =$scope.male;		
+		$scope.query =boy+girl;
+		 
+		//$scope.query.girl = girl;
 	};
 	
   $http.get('js/data.json').success(function(data) {

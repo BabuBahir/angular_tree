@@ -1,0 +1,32 @@
+[
+  {
+    "song": "Song 1",
+    "male": "Kishore",
+    "female": "Lata"
+  },
+  {
+    "song": "Song 2",
+    "male": "Kishore",
+    "female": "Lata"
+  },
+  {
+    "song": "Song 3",
+    "male": "Kishore",
+    "female": "Asha"
+  },
+  {
+    "song": "Song 4",
+    "male": "Manna",
+    "female": "Lata"
+  },
+  {
+    "song": "Song 5",
+    "male": "Manna",
+    "female": "Asha"
+  },
+  {
+     "song": "Song 6",
+    "male": "Manna",
+    "female": "Asha"
+  } 
+]

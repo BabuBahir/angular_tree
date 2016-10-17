@@ -1,0 +1,27 @@
+ <section class="artistpage">
+ 
+  <ul ng-model="query" class="artistlist">
+	 <button ng-click="toggle()" >SONGS</button>
+	 
+	 <p ng-show="myMale" ng-init="singer=['Kishore','Manna']">			
+		<a id ={{singer[0]}} ng-click="first_toggle($event)" href="">{{singer[0]}}</a> 
+		<a id ={{singer[1]}} ng-click="first_toggle($event)" href="">{{singer[1]}}</a>		 
+	 </p>
+	 
+	<p ng-model= "male" ng-show="varFemaleSinger">	 
+		<br/>	
+		<a ng-click="female_toggle($event)" href="#/Lata">Lata and {{male}}</a> 
+		<a ng-click="female_toggle($event)" href="#/Asha">Asha and {{male}}</a> 
+	</p>
+	
+    <li ng-show="mySongs" class="artist cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+      <a href="#/details/{{artists.indexOf(item)}}">        
+        <div class="info">
+          <h2>{{item.song}}</h2>
+		  <h3>{{item.male}}</h3>
+          <h3>{{item.female}}</h3>
+        </div>
+      </a>
+    </li>
+  </ul>  
+</section>

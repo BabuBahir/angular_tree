@@ -1,6 +1,6 @@
  <section class="artistpage">
  
-  <ul ng-model="query" class="artistlist">
+  <ul ng-model="finalFemale" class="artistlist">
 	 <button ng-click="toggle()" >SONGS</button>
 	 
 	 <p ng-show="myMale" ng-init="singer=['Kishore','Manna']">			
@@ -8,16 +8,15 @@
 		<a id ={{singer[1]}} ng-click="first_toggle($event)" href="">{{singer[1]}}</a>		 
 	 </p>
 	 
-	<p ng-model= "male" ng-show="varFemaleSinger">	 
+	<p ng-model="male" ng-show="varFemaleSinger">	 
 		<br/>	
 		<a id="Lata" ng-click="female_toggle($event)" href="">Lata and {{male}}</a> 
 		<a id="Asha" ng-click="female_toggle($event)" href="">Asha and {{male}}</a> 
 	</p>
 	 
-    <li ng-show="mySongs" class="artist cf" ng-repeat="item in artists | filter: {nickName:query}"> 
-        
-        <div class="info">
-          <h4>{{item.song}}</h4>		   
+    <li ng-show="mySongs" class="artist cf" ng-repeat="item in artists | filter:customFilter">        
+    	<div class="info">
+          <h4>{{item.song }}</h4>		   
         </div>
       </a>
     </li>

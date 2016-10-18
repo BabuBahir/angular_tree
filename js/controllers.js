@@ -8,7 +8,8 @@ artistControllers.controller('ListController', ['$scope', '$http', function($sco
     $scope.toggle = function() {		  
 		  $scope.myMale = !$scope.myMale;	 
 		  $scope.varFemaleSinger= false;		 
-		  $scope.mySongs = false;		  
+		  $scope.mySongs = false;	
+        		  
 	};
 	
 	$scope.first_toggle = function($event) {
@@ -22,15 +23,25 @@ artistControllers.controller('ListController', ['$scope', '$http', function($sco
 		$scope.mySongs = true;
 		$scope.varFemaleSinger = true;
 		$scope.myMale = true;
-		var girl = $event.currentTarget.id;
-		var boy =$scope.male;		
-		$scope.query =boy+girl;
-		 
-		//$scope.query.girl = girl;
+        $scope.finalFemale = $event.currentTarget.id;		
 	};
 	
+	$scope.customFilter=function(item){		
+		 var girl = $scope.finalFemale;
+		 var boy =$scope.male;	
+		 
+		 if(item.male == boy && item.female == girl){
+			 return true;
+		  }
+		else{
+			 return false;
+		 }
+	}
+	
+	//reading JSON file
   $http.get('js/data.json').success(function(data) {
     $scope.artists = data;     
   });
+  
 }]);
  

@@ -1,17 +1,17 @@
  <section class="artistpage">
  
   <ul ng-model="finalFemale" class="artistlist">
-	 <button ng-click="toggle()" >SONGS</button>
+	 <button class="btn btn-danger" ng-click="toggle()" >SONGS</button> 
 	 
-	 <p ng-show="myMale" ng-init="singer=['Kishore','Manna']">			
-		<a id ={{singer[0]}} ng-click="first_toggle($event)" href="">{{singer[0]}}</a> 
-		<a id ={{singer[1]}} ng-click="first_toggle($event)" href="">{{singer[1]}}</a>		 
+	 <p ng-show="myMale" ng-init="singer=['Kishore','Manna']"><br/>	 
+		<button class="btn btn-info" id ={{singer[0]}} ng-click="first_toggle($event)">{{singer[0]}}</button> &nbsp;&nbsp;&nbsp;
+		<button class="btn btn-warning" id ={{singer[1]}} ng-click="first_toggle($event)">{{singer[1]}}</button>		 
 	 </p>
 	 
 	<p ng-model="male" ng-show="varFemaleSinger">	 
 		<br/>	
-		<a id="Lata" ng-click="female_toggle($event)" href="">Lata and {{male}}</a> 
-		<a id="Asha" ng-click="female_toggle($event)" href="">Asha and {{male}}</a> 
+		<button id="Lata" ng-click="female_toggle($event)" >Lata and {{male}}</button> 
+		<button id="Asha" ng-click="female_toggle($event)">Asha and {{male}}</button> 
 	</p>
 	 
     <li ng-show="mySongs" class="artist cf" ng-repeat="item in artists | filter:customFilter">        

@@ -16,7 +16,7 @@ artistControllers.controller('ListController', ['$scope', '$http', function($sco
 		  var str = $event.currentTarget.id;				   		  		   
 		  $scope.mySongs = false;
 		  $scope.varFemaleSinger = !$scope.varFemaleSinger;
-		  $scope.male=str;			  
+		  $scope.male=str;                 			  		  
 	};
 	
 	$scope.female_toggle = function($event){
